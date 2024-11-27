@@ -4,7 +4,7 @@
 - The result will be a template you can adapt to your assignment and use in Github classroom (don't forget to remote the lecturer info)
 - Keep your own templates [in sync](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) with this one
 
-# A good girl ✨
+# A good girls guide to murder ✨
 
 A short description of your project. Aim for 2-3 lines.
 Next, read this example and adapt it to your project.
