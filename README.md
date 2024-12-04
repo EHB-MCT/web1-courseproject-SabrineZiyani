@@ -6,9 +6,7 @@
 
 # A good girls guide to murder ✨
 
-A short description of your project. Aim for 2-3 lines.
-Next, read this example and adapt it to your project.
-If you want to add more sections, please do so after the existing ones (avoid burying your sources under a lot of text!).
+A creative portfolio inspired by Pippa Fitz-Amobi from A Good Girl's Guide to Murder, showcasing her journey as a determined investigator. Highlights include her meticulous case notes, visual timelines, and evidence boards, all reflecting her sharp intellect and dedication to uncovering the truth.
 
 Live link: [website.be](website.be) (optional)
 
@@ -16,4 +14,4 @@ Live link: [website.be](website.be) (optional)
 
 https://codepen.io/riogrande/pen/jqRQYy
 
-from line 34 to 49 and css ins slideshow.css
+from line 34 to 49 and css in slideshow.css
