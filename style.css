@@ -46,7 +46,8 @@ header li {
 	align-items: center;
 }
 
-.photos div {
+.photos div,
+.photos section {
 	flex: 1;
 }
 

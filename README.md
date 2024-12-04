@@ -14,4 +14,6 @@ Live link: [website.be](website.be) (optional)
 
 ## Sources 🗃️
 
-- [Carousel](https://www.nieknijland.nl/blog/make-a-responsive-carousel-with-just-css) gebruikt hier... aanvullen
+https://codepen.io/riogrande/pen/jqRQYy
+
+from line 34 to 49 and css ins slideshow.css
