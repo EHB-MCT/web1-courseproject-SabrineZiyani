@@ -10,12 +10,14 @@ body#about {
 	background-color: blue;
 	background-image: url(image/cork-board-texture-pattern-background_43300-1481.avif);
 	background-size: cover;
+	margin-bottom: 150px;
 }
 
 body#qualities {
 	background-color: rgb(255, 0, 0);
-	background-image: url(image/Crime\ scene\ _\ Police\ scene\ tape\ stock\ photo\ image.png);
+	background-image: url(image/istockphoto-839004180-612x612.jpg);
 	background-size: cover;
+	margin-bottom: 150px;
 }
 
 .homepage {
@@ -26,6 +28,7 @@ body#qualities {
 h1 {
 	color: white;
 	font-size: 35px;
+	text-align: center;
 }
 
 #about h1 {
@@ -48,6 +51,8 @@ header li {
 .photos {
 	display: flex;
 	align-items: center;
+	margin-top: 150px; /* Adjust the value as needed */
+	margin-bottom: 100px;
 }
 
 .photos div,
