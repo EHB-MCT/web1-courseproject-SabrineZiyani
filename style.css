@@ -94,4 +94,50 @@ a {
 	text-align: center;
 }
 
-@med;
+@media screen and (max-width: 1024px) {
+	.navigation li.no-mobile {
+		display: none;
+	}
+
+	.One-piece-episodes div {
+		width: 48%;
+	}
+}
+
+.mobile {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+
+	header {
+		background-image: none;
+		height: auto;
+	}
+
+	.intro {
+		width: 100%;
+	}
+
+	.One-piece-episodes div {
+		width: 100%;
+	}
+
+	.logo-onepiece {
+		width: 100%;
+	}
+}
+
+.navigation li {
+	padding-right: 0;
+}
+
+.navigation li:last-child {
+	padding-left: 10px;
+}
