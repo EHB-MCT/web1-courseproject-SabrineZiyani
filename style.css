@@ -11,6 +11,7 @@ body#about {
 	background-image: url(image/cork-board-texture-pattern-background_43300-1481.avif);
 	background-size: cover;
 	margin-bottom: 150px;
+	margin-top: 100px;
 }
 
 body#qualities {
@@ -37,15 +38,25 @@ h1 {
 
 header {
 	color: white;
-	text-decoration: none;
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-start;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: black;
+	z-index: 1000;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	height: 100px;
 }
 
 header li {
 	display: inline;
 	margin-left: 20px;
 	font-size: 20px;
+	line-height: 1;
 }
 
 .photos {
@@ -72,18 +83,18 @@ p {
 	text-align: center;
 }
 
-a {
-	text-decoration: none;
-}
-
 .button {
 	padding: 15px;
-	background-color: black;
+	background-color: white;
 	display: inline-block;
 	border-radius: 25px;
 	text-decoration: none;
-	color: #fff;
-	font-weight: 25px;
+	color: black;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1;
+	transition: background-color 0.3s, transform 0.3s;
+	box-sizing: border-box;
 }
 
 .headerphoto {
@@ -94,50 +105,7 @@ a {
 	text-align: center;
 }
 
-@media screen and (max-width: 1024px) {
-	.navigation li.no-mobile {
-		display: none;
-	}
-
-	.One-piece-episodes div {
-		width: 48%;
-	}
-}
-
-.mobile {
-	display: none;
-}
-
-@media screen and (max-width: 768px) {
-	.desktop {
-		display: none;
-	}
-	.mobile {
-		display: block;
-	}
-
-	header {
-		background-image: none;
-		height: auto;
-	}
-
-	.intro {
-		width: 100%;
-	}
-
-	.One-piece-episodes div {
-		width: 100%;
-	}
-
-	.logo-onepiece {
-		width: 100%;
-	}
-}
-
-.navigation li {
-	padding-right: 0;
-}
-
-.navigation li:last-child {
-	padding-left: 10px;
+a.button:hover {
+	background-color: #2d2d2d;
+	transform: scale(1.05);
 }
