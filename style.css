@@ -7,7 +7,6 @@ body {
 }
 
 body#about {
-	background-color: blue;
 	background-image: url(image/cork-board-texture-pattern-background_43300-1481.avif);
 	background-size: cover;
 	margin-bottom: 150px;
@@ -15,19 +14,51 @@ body#about {
 }
 
 body#qualities {
-	background-color: rgb(255, 0, 0);
 	background-image: url(image/istockphoto-839004180-612x612.jpg);
 	background-size: cover;
 	margin-bottom: 150px;
 }
 
+/* Prevent horizontal scroll */
+body,
+html {
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	width: 100%;
+	padding: 10px 20px;
+}
+
+.menu-icon {
+	position: absolute;
+	top: 35px;
+	right: 15px;
+}
+
+nav ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 .homepage {
 	width: 100%;
-	margin: 0 auto;
+	margin-top: 100px; 
 }
 
 h1 {
-	color: black;
+	color: white;
 	font-size: 35px;
 	text-align: center;
 }
@@ -37,7 +68,8 @@ h1 {
 }
 
 header {
-	color: black;
+	background-color: black; 
+	color: white; 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -45,10 +77,10 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 1000;
+	height: 100px; 
+	z-index: 1000; 
 	padding: 10px 20px;
 	box-sizing: border-box;
-	height: 100px;
 }
 
 header li {
@@ -96,82 +128,49 @@ p {
 	box-sizing: border-box;
 }
 
-.headerphoto {
-	flex: 1000;
-	width: 100%;
-	height: 100%;
-	background-color: white;
-	text-align: center;
-}
-
 a.button:hover {
 	background-color: #2d2d2d;
 	transform: scale(1.05);
 }
 
-#slideshow {
-	text-align: center;
-	overflow: hidden;
-	height: 510px;
-	width: 728px;
-	margin: 0 auto;
+.headerphoto {
+	width: 100%; 
+	height: auto; 
+	text-align: center; 
+	overflow: hidden; 
 }
 
-.slide-wrapper {
-	width: 2912px;
-	-webkit-animation: slide 7s ease infinite;
+.headerphoto img {
+	width: 100%;
+	height: auto; 
+	object-fit: contain; 
+	display: block; 
+	margin: 0 auto; 
+}
+ 
+
+/* Hamburger Menu */
+.menu-icon {
+	display: none;
+	cursor: pointer;
+	flex-direction: column;
+	gap: 5px;
+	position: absolute;
+	top: 35px;
+	right: 25px;
+	z-index: 1001;
 }
 
-.slide {
-	float: left;
-	height: 510px;
-	width: 728px;
+.menu-icon span {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.slide:nth-child(1) {
-	background: #d93b65;
-}
-
-.slide:nth-child(2) {
-	background: #037e8c;
-}
-
-.slide:nth-child(3) {
-	background: #36bf66;
-}
-
-.slide:nth-child(4) {
-	background: #d9d055;
-}
-
-.slide-number {
-	color: #000;
-	text-align: center;
-	font-size: 10em;
-}
-
-@-webkit-keyframes slide {
-	20% {
-		margin-left: 0px;
-	}
-	30% {
-		margin-left: -728px;
-	}
-	50% {
-		margin-left: -728px;
-	}
-	60% {
-		margin-left: -1456px;
-	}
-	70% {
-		margin-left: -1456px;
-	}
-	80% {
-		margin-left: -2184px;
-	}
-	90% {
-		margin-left: -2184px;
-	}
+#menu-toggle {
+	display: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -198,9 +197,42 @@ a.button:hover {
 }
 
 @media screen and (max-width: 768px) {
-	header {
-		background-image: none;
-		height: auto;
+	/* Hamburger Icon */
+	.menu-icon {
+		display: flex;
+	}
+
+	/* Hide Navigation Menu by Default */
+	nav ul {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 100px; 
+		left: 0;
+		width: 100%;
+		background-color: #101e0d;
+		text-align: center;
+		z-index: 1000;
+		padding: 0;
+		margin: 0;
+	}
+
+	/* Toggle Menu Visibility */
+	#menu-toggle:checked + .menu-icon + nav ul {
+		display: flex;
+	}
+
+	/* Animate Hamburger to "X" */
+	#menu-toggle:checked + .menu-icon span:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	#menu-toggle:checked + .menu-icon span:nth-child(2) {
+		opacity: 0;
+	}
+
+	#menu-toggle:checked + .menu-icon span:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
 	}
 
 	.photos div,
@@ -246,9 +278,5 @@ a.button:hover {
 
 	.button {
 		font-size: 14px;
-		padding: 10px 15px;
-		width: auto;
-		text-align: center;
-		margin: 5px;
+		padding: 10px
 	}
-}
